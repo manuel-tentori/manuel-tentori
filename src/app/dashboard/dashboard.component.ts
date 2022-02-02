@@ -14,7 +14,7 @@ export class DashboardComponent {
       if (matches) {
         return [
           { title: 'Aziende nei diversi regimi', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
+          { title: 'Funzioni', cols: 1, rows: 1 },
           { title: 'Ultime anagrafiche inserite', cols: 1, rows: 1 },
           { title: 'Diversificazione ateco', cols: 1, rows: 1 },
           { title: 'Card 5', cols: 1, rows: 1 }
@@ -23,7 +23,7 @@ export class DashboardComponent {
 
       return [
         { title: 'Aziende nei diversi regimi', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
+        { title: 'Funzioni', cols: 1, rows: 1 },
         { title: 'Ultime anagrafiche inserite', cols: 1, rows: 2 },
         { title: 'Diversificazione ateco', cols: 1, rows: 1 },
         { title: 'Card 5', cols: 2, rows: 1 }

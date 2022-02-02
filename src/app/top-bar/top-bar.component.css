@@ -1,5 +1,7 @@
 .mat-toolbar.mat-primary {
+  position: -webkit-sticky;
   position: sticky;
+
   top: 0;
   z-index: 1;
 }
@@ -9,5 +11,5 @@
 }
 
 .settings-icon {
-  margin-left: 75em; 
+  margin-left: 750em; 
 }

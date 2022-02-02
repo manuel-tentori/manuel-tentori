@@ -12,12 +12,27 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { TabsComponent } from './tabs/tabs.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
+import { ChartsComponent } from './charts/charts.component';
+import { StepperNewanagraficaComponent } from './stepper-newanagrafica/stepper-newanagrafica.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatStepperModule} from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule} from '@angular/material/dialog';
+import { MatDialogContent } from '@angular/material/dialog';
+import { DialogNewanagraficaComponent, DialogContentNewAnagrafica } from './dialog-newanagrafica/dialog-newanagrafica.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { TableAnagraficaComponent } from './table-anagrafica/table-anagrafica.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { SelectRegionComponent } from './select-region/select-region.component'
 
 
 @NgModule({
@@ -25,7 +40,14 @@ import { MatListModule } from '@angular/material/list';
     AppComponent,
     DashboardComponent,
     TabsComponent,
-    TopBarComponent
+    TopBarComponent,
+    ChartsComponent,
+    StepperNewanagraficaComponent,
+    DialogNewanagraficaComponent,
+    DialogContentNewAnagrafica,
+    TableAnagraficaComponent,
+    SelectRegionComponent,
+    StepperNewanagraficaComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,10 +61,22 @@ import { MatListModule } from '@angular/material/list';
     LayoutModule,
     MatTabsModule,
     MatToolbarModule,
+    FormsModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents:[],
+  bootstrap: [AppComponent, DialogContentNewAnagrafica, TableAnagraficaComponent]
 })
 export class AppModule { }

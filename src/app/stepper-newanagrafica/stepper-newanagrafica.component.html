@@ -1,0 +1,76 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Dati anagrafici</ng-template>
+      <h3>Dati anagrafici</h3>
+      <mat-form-field class="formField" appearance="fill">
+        <mat-label>Cod. Fisc.</mat-label>
+        <input matInput placeholder="Codice fiscale" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <mat-form-field class="formField" appearance="fill">
+        <mat-label>P. Iva</mat-label>
+        <input matInput placeholder="Partita iva" formControlName="firstCtrl" required minlength="11">
+      </mat-form-field>
+      <mat-form-field class="formField" appearance="fill">
+        <mat-label>Cognome
+        </mat-label>
+        <input matInput placeholder="Cognome" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <mat-form-field class="formField" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Nome" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <mat-form-field class="formField" appearance="fill">
+        <mat-label>Rag. Soc.</mat-label>
+        <input matInput placeholder="Ragione Sociale" formControlName="firstCtrl" required>
+      </mat-form-field>
+    
+
+      <h3>Residenza</h3>
+      <mat-form-field appearance="fill">
+        <mat-label>Comune</mat-label>
+        <input matInput placeholder="Comune" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Prov.</mat-label>
+        <input matInput placeholder="Provincia" formControlName="firstCtrl" required minlength="11">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>CAP</mat-label>
+        <input matInput placeholder="CAP" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <app-select-region></app-select-region>
+
+
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>
