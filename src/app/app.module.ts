@@ -17,7 +17,6 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { ChartsComponent } from './charts/charts.component';
 import { StepperNewanagraficaComponent } from './stepper-newanagrafica/stepper-newanagrafica.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -32,7 +31,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
-import { SelectRegionComponent } from './select-region/select-region.component'
+import { SelectRegionComponent } from './select-region/select-region.component';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { NgChartsModule } from 'ng2-charts';
+import { Chart1Component } from './chart1/chart1.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -41,13 +44,14 @@ import { SelectRegionComponent } from './select-region/select-region.component'
     DashboardComponent,
     TabsComponent,
     TopBarComponent,
-    ChartsComponent,
     StepperNewanagraficaComponent,
     DialogNewanagraficaComponent,
     DialogContentNewAnagrafica,
     TableAnagraficaComponent,
     SelectRegionComponent,
     StepperNewanagraficaComponent,
+    Chart1Component,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,7 +77,9 @@ import { SelectRegionComponent } from './select-region/select-region.component'
     MatTableModule,
     MatSortModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    GoogleChartsModule,
+    NgChartsModule
   ],
   providers: [],
   entryComponents:[],
